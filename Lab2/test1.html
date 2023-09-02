@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Input Type on Blur Event (jQuery)</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <form>
+    <input id="field1" type="text" value="Field 1">
+    <input id="field2" type="text" value="Field 2">
+  </form>
+
+  <script>
+    $(document).ready(function() {
+      // Get a reference to the "Field1" input element
+      var $field1Input = $("#field1");
+
+      // Attach a blur event handler using jQuery
+      $field1Input.on("blur", function() {
+        // Change the input type to "password"
+        $field1Input.attr("type", "password");
+      });
+    });
+  </script>
+</body>
+</html>

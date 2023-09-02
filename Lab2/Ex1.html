@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function celsiusToFaraheit(celsius){
+                var faraheit = (celsius * 9/5) + 32;
+                return faraheit;
+            }
+            function faraheitToCelsius(faraheit){
+                var celsius = (faraheit - 32) * 5/9;
+                return celsius;
+            }
+            var choice = prompt("Enter 1 to convert to celsius and 2 to convert to faraheit");
+            var temperature;
+            if (choice == "1"){
+                temperature = parseFloat(prompt("Enter temperature in celsius"));
+                var faraheit = celsiusToFaraheit(temperature);
+                alert("the converted Faraheit is " + faraheit);
+            }
+            else{
+                temperature = parseFloat(prompt("Enter temperature in faraheit"));
+                var celsius = faraheitToCelsius(temperature);
+                alert("the converted Celsius is " + celsius);
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>
