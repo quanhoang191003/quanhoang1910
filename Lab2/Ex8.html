@@ -10,22 +10,33 @@
             <input id="field2" type="text" value="Field 2">
         </form>
         <script>
-            //Javascript
-            // var field1Input = document.getElementById("field1");
+            // Javascript
+            var field1Input = document.getElementById("field1");
 
-            // field1Input.addEventListener("blur",function() {
-            //     var fieldValue = field1Input.value;
-            //     alert("Field 1 lost focus. Current value: " + fieldValue);
-            // });
+            field1Input.addEventListener("blur",function() {
+                var fieldValue = field1Input.value;
+                field1Input.type ="password";
+                alert("Field 1 lost focus. Current value: " + fieldValue);
+            });
+            
+            field1Input.addEventListener("focus",function() {
+                var fieldValue = field1Input.value;
+                field1Input.type ="text";
+            });
+
 
             //jQuery
-            $(document).ready(function() {
-                $("#field1").on("blur",function() {
-                    var field1Value = $("#field1").val();
-                    $("#field1").attr("type", "password");
-                    alert("Field 1 lost focus. Current value: " + field1Value);
-                });
-            });
+//             $(document).ready(function() {
+//                 $("#field1").on("blur",function() {
+//                     var field1Value = $("#field1").val();
+//                     $("#field1").attr("type", "password");
+//                     alert("Field 1 lost focus. Current value: " + field1Value);
+//                 });
+//                 $("#field1").on("focus",function() {
+//                     $("#field1").attr("type", "text");
+//                 });
+//             });
+            
         </script>
     </body>
 </html>

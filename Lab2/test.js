@@ -1,4 +1,3 @@
-// alert("Test me just name")
-// confirm("How can I call you")
-var fullName = "Quan Hoang"
-console.log("Name:",fullName)
+var array = [98, 99]
+array.length =(1)
+console.log(array[1]);
